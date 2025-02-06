@@ -4,35 +4,53 @@ public class calculator
     public static void main(String []args)
     {
         Scanner input=new Scanner(System.in);
-        float x, y;
+        float x,z;
         int oper;
-        System.out.print("1. Sum (+)\n2. Sub (-)\n3. Multi (*)\n4. Div (/)\n5. Mod (%)\n0. Exit\nChoose the operation : ");
-        oper =input.nextInt();
-        if(oper==0) return;
-        
-        System.out.println("Enter two numbers to calculate :");
-        x=input.nextInt();
-        y =input.nextInt();
-        switch(oper)
+        do
         {
-            case 1:
-                System.out.println(x+"+"+y+" = "+(x+y));
-                break;
-            case 2:
-                System.out.println(x+"-"+y+" = "+(x-y));
-                break;
-            case 3:
-                System.out.println(x+"*"+y+" = "+(x*y));
-                break;
-            case 4:
-                System.out.println(x+"/"+y+" = "+(x/y));
-                break;
-            case 5:
-                System.out.println(x+"%"+y+" = "+(x%y));
-                break;
-            default:
-                System.out.println("invalid input");
-        }
-
+            System.out.print("1. Sum (+)\n2. Sub (-)\n3. Multi (*)\n4. Div (/)\n5. Mod (%)\n0. Exit\nChoose the operation : ");
+            oper = input.nextInt();
+            switch (oper) {
+                case 1:
+                    System.out.print("Enter the first number : ");
+                    x = input.nextInt();
+                    System.out.print("Enter the second number : ");
+                    z = input.nextInt();
+                    System.out.println(x + "+" + z + " = " + (x + z)+"\n");
+                    break;
+                case 2:
+                    System.out.print("Enter the first number : ");
+                    x = input.nextInt();
+                    System.out.print("Enter the second number : ");
+                    z = input.nextInt();
+                    System.out.println(x + "-" + z + " = " + (x - z)+"\n");
+                    break;
+                case 3:
+                    System.out.print("Enter the first number : ");
+                    x = input.nextInt();
+                    System.out.print("Enter the second number : ");
+                    z = input.nextInt();
+                    System.out.println(x + "*" + z + " = " + (x * z)+"\n");
+                    break;
+                case 4:
+                    System.out.print("Enter the first number : ");
+                    x = input.nextInt();
+                    System.out.print("Enter the second number : ");
+                    z = input.nextInt();
+                    System.out.println(x + "/" + z + " = " + (x / z)+"\n");
+                    break;
+                case 5:
+                    System.out.print("Enter the first number : ");
+                    x = input.nextInt();
+                    System.out.print("Enter the second number : ");
+                    z = input.nextInt();
+                    System.out.println(x + "%" + z + " = " + (x % z)+"\n");
+                    break;
+                case 0:
+                    System.out.println("Goodbye"); break;
+                default:
+                    System.out.println("invalid input, Try again");
+            }
+        }while(oper!=0);
     }
 }
