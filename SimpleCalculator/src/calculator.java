@@ -41,7 +41,6 @@ public class calculator
     {
         Scanner input=new Scanner(System.in);
         float x, y;
-//        int operation;
 
         do
         {
